@@ -1,16 +1,16 @@
+#include<iostream>
 #include<stdio.h>
 using namespace std;
-
 int main(){
 
     int nr, rezultat = 0, putere = 1;
     scanf("%d", &nr);
 
     while( nr != 0){
-        int rest = nr % 2; 
-        rezultat = rezultat + rest * putere;
-        putere = putere * 10; 
-        nr = nr / 2;
+        int cifra = nr % 10; 
+        rezultat = rezultat + cifra * putere;
+        putere = putere * 2;
+        nr = nr / 10; 
     }
     printf("Rezultatul este %d", rezultat);
 

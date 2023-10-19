@@ -24,7 +24,7 @@ using namespace std;
 int main(){
 
     int a, b ;
-    printf("Introduceti trei numere: ");
+    printf("Introduceti doua numere: ");
     scanf("%d %d", &a, &b);
     
     printf("cmmdc: %d\n", cmmdc(a, b));
