@@ -3,10 +3,16 @@
 using namespace std;
 int main(){
 
-    int v[40][40];
+    
     int n, m, l, c;
     scanf("%d %d", &n, &m);
     
+    int **v = (int **)malloc( 40 * sizeof(int *));
+    for(int i = 0; i < 40; i++){
+        v[i] = (int *)malloc( 40 * sizeof(int));
+    }
+
+
     for ( int i = 0; i < m; i++){
         for( int j = 0; j < n; j++){
             scanf("%d", &v[i][j]);
@@ -50,7 +56,7 @@ int main(){
         printf("\n");
     }
 
-
+    
 
 return 0;
 }

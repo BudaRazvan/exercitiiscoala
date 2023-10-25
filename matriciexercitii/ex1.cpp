@@ -20,7 +20,7 @@ int main(){
     printf("Linia de sters: ");
     scanf("%d", &l);
     
-    for(int i = l; i < n  ; i++){
+    for(int i = l; i < n + 1  ; i++){
         for( int j = 0; j < n; j++){
             v[i][j]=v[i+1][j];
         }

@@ -1,10 +1,12 @@
 #include<stdio.h>
-
+#include<cstdlib>
 using namespace std;
 int main(){
 
-    int n, v[30], x;
+    int n, x;
     scanf("%d", &n);
+    int *v=(int*)malloc(40*sizeof(int));
+
     for( int i = 1; i <= n; i++){
         scanf("%d", &v[i]);
     }
@@ -17,6 +19,7 @@ int main(){
         }
     printf("afisare %d", nr);
 
+    free(v);
 
 return 0;
 }

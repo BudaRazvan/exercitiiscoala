@@ -1,16 +1,14 @@
 #include <stdio.h>
 #include <limits.h>
 
-int multime[1000001];
-
 int main() {
-    int n, v[30];
+    int n, v[30], AP[1000001] = {};
 
     scanf("%d", &n);
     int min = INT_MAX, max = INT_MIN;
     for (int i = 1; i <= n; i++) {
         scanf("%d", &v[i]);
-        multime[v[i]] = 1;
+        AP[v[i]]++;
         if (v[i] < min) {
             min = v[i];
         }
@@ -20,8 +18,8 @@ int main() {
     }
 
     for (int i = min; i <= max; i++) {
-        if (multime[i] != 0 ) {
-            printf("%d ", i);
+        if (AP[i]) {
+            printf("%d : %d\n", i, AP[i]);
         }
     }
 

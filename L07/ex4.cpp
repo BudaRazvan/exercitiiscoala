@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <limits.h>
+#include<cstdlib>
 
-int multime[1000001];
+int *multime = (int*)malloc(1000001*sizeof(int));
+
 
 int main() {
-    int n, v[30];
-
+    int n;
+    int *v=(int*)malloc(40*sizeof(int));
     scanf("%d", &n);
+  
     int min = INT_MAX, max = INT_MIN;
     for (int i = 1; i <= n; i++) {
         scanf("%d", &v[i]);
@@ -20,10 +23,12 @@ int main() {
     }
 
     for (int i = min; i <= max; i++) {
-        if (multime[i] != 0 ) {
+        if (multime[i]) {
             printf("%d ", i);
         }
     }
+    free(v);
+    free(multime);
 
     return 0;
 }

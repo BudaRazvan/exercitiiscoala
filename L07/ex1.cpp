@@ -29,16 +29,17 @@ using namespace std;
 
     void eliminare( int &n, int v[], int k){
         for( int i = k; i < n; i++){
-            v[i] = v[ i + 1 ];
+            v[i] = v[ i - 1 ];
         }
     n--;
         
     }
 
     void inserare( int &n, int v[], int k, int y){
-        for( int i = n; i > k; i-- ){
+        for( int i = n; i < k; i-- ){
             v[i] = v[ i - 1 ];
         }
+    n++;
     v[k] = y;
     }
 
@@ -65,9 +66,11 @@ using namespace std;
    
 }
 
+
 int main(){
-    int n, v[20];
+    int n;
     scanf("%d", &n);
+    int *v = (int*)malloc(30*sizeof(int));
 
     for ( int i = 1; i <= n; i++){
     scanf("%d", &v[i]);
@@ -78,6 +81,8 @@ int main(){
     afisare(n, v);
     permutareDreapta(n, v);
     permutareStanga(n, v);
+
+    free(v);
 
    
 return 0;

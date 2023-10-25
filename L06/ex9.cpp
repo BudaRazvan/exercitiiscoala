@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<iostream>
+#include<cstdlib>
 #include<limits.h>
 using namespace std;
 
@@ -31,7 +31,7 @@ int main(){
         }
     }
 
-
+    
 
 
 
